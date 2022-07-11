@@ -1,0 +1,25 @@
+root cd /etc/ssmtp -----> vi ssmtp.conf ---------> [#
+# Config file for sSMTP sendmail
+#
+# The person who gets all mail for userids < 1000
+# Make this empty to disable rewriting.
+#root=postmaster
+SERVER=manjunathankrishnan@gmail.com { give here ur mail id }
+# The place where the mail goes. The actual machine name is required no
+# MX records are consulted. Commonly mailhosts are named mail.domain.com
+mailhub=smtp.gmail.com:587
+AuthUser=manjunathankrishnan@gmail.com { give here ur mail id }
+AuthPass=glyhfqggkfdxrgcr { generate google app password generate app password & past here } { pre request 2 way authentication }
+UseTLS=YES
+UseSTARTTLS=YES
+# Where will the mail seem to come from?
+#rewriteDomain=
+rewriteDomain=gmail.com
+# The full hostname
+hostname=ip-172-31-0-159.ap-south-1.compute.internal
+#hostname=test
+# Are users allowed to set their own From: address?
+# YES - Allow the user to specify their own From: address
+# NO - Use the system generated From: address
+FromLineOverride=YES { default No try to change Yes }
+[4:09 PM] and now check # ssmtp user@example.com  give some body of the content CTRL+D ( after check ur give mail it shows body of the message)
